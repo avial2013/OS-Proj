@@ -1,0 +1,95 @@
+@website = http://localhost:3000
+
+### GET - all Restaurants
+
+GET {{website}}/restaurantModel
+
+### GET - all Questions
+
+GET {{website}}/questionModel
+
+
+
+### POST - Add new restaurant to collection
+POST {{website}}/restaurantModel/add
+Content-Type: application/json
+
+{
+    "id": 1, 
+    "name": "asdf",
+    "img": "",
+    "address": "sdfssadf",
+    "contact": "1324",
+    "openingHours": "32:00 - 17:00",
+    "grade": "None"
+}
+
+### PUT - Update a Restaurant's grade
+PUT {{website}}/restaurantModel/update/Domino
+Content-Type: application/json
+
+{
+    "newGrade":"None"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### GET - one student
+GET {{website}}/dbModels/Avial
+
+### POST
+POST {{website}}/dbModels/add
+Content-Type: application/json
+
+{
+    "name": "Avial",
+    "age": "24",
+    "address": {
+        "country": "Israel",
+        "city": "Modiin"
+    }
+}
+
+### POST 2
+POST {{website}}/dbModels/add
+Content-Type: application/json
+
+{
+    "name":"Bracha",
+    "age": 20,
+    "address": {
+        "country":"Israel", 
+        "city":"Tel-Aviv"
+    }
+}
+
+### PUT
+PUT {{website}}/dbModels/update/John
+Content-Type: application/json
+
+{
+    "newAge":38
+}
+
+
+### DELETE
+DELETE {{website}}/dbModels/delete/John
+
+### DELETE with errors
+DELETE {{website}}/dbModels/delete/aaa

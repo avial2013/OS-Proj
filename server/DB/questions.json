@@ -1,0 +1,152 @@
+[
+    {
+        "questionNum": 1, 
+        "questionStr": "Kitchen temperature is between 22 - 25 degrees celsius.",
+        "isTrue": false,
+        "category": {
+            "id": 1, 
+            "title": "A"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 2, 
+        "questionStr": "Refrigerator temperature is between 14 - 18 degrees celsius.",
+        "isTrue": false,
+        "category": {
+            "id": 1, 
+            "title": "A"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 3, 
+        "questionStr": "Room Service temperature is between 23 - 25 degrees celsius.",
+        "isTrue": false,
+        "category": {
+            "id": 1, 
+            "title": "A"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 4, 
+        "questionStr": "No pests of any kind are found in Kitchen.",
+        "isTrue": false,
+        "category": {
+            "id": 1, 
+            "title": "A"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 5, 
+        "questionStr": "Kitchen is sprayed with pesticides no longer then a period of 6 months.",
+        "isTrue": false,
+        "category": {
+            "id": 1, 
+            "title": "A"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 6, 
+        "questionStr": "Storage gets checked for pests not longer then a period of 2 months.",
+        "isTrue": false,
+        "category": {
+            "id": 1, 
+            "title": "A"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 7, 
+        "questionStr": "Expiration date for food aren't longer then a week before expiration date.",
+        "isTrue": false,
+        "category": {
+            "id": 2, 
+            "title": "B"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 8, 
+        "questionStr": "No food gets recycled between customers.",
+        "isTrue": false,
+        "category": {
+            "id": 2, 
+            "title": "B"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 9, 
+        "questionStr": "Food has Health-Organization approval signature.",
+        "isTrue": false,
+        "category": {
+            "id": 2, 
+            "title": "B"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 10, 
+        "questionStr": "Wash hands with soap before handling food.",
+        "isTrue": false,
+        "category": {
+            "id": 2, 
+            "title": "B"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 11, 
+        "questionStr": "Work with gloves in the kitchen.",
+        "isTrue": false,
+        "category": {
+            "id": 2, 
+            "title": "B"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 12, 
+        "questionStr": "Long her workers cover their heads with hats",
+        "isTrue": false,
+        "category": {
+            "id": 2, 
+            "title": "B"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 13, 
+        "questionStr": "Degrease and clean oven inside and out.",
+        "isTrue": false,
+        "category": {
+            "id": 3, 
+            "title": "C"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 14, 
+        "questionStr": "Degrease and clean kitchen walls.",
+        "isTrue": false,
+        "category": {
+            "id": 3, 
+            "title": "C"
+        },
+        "grade": 0
+    },
+    {
+        "questionNum": 15, 
+        "questionStr": "Degrease and clean counter tops.",
+        "isTrue": false,
+        "category": {
+            "id": 3, 
+            "title": "C"
+        },
+        "grade": 0
+    }
+]
