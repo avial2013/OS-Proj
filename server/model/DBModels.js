@@ -20,7 +20,6 @@ let QuestionSchema = new mongoose.Schema(
 // 2
 let RestaurantSchema = new mongoose.Schema(
     {
-        id: Number, 
         name: String,
         img: String,
         address: String,

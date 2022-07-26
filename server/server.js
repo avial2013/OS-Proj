@@ -18,11 +18,11 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
-// Route Paths
+// use the router for students:
 app.use('/restaurantModel', RestaurantModel);
 app.use('/questionModel', QuestionModel);
 
-// Connect to MongoDB using mongoose - to Sanitation database. 
+// Connect to MongoDB using mongoose - to University database. 
 mongoose.connect('mongodb://localhost:27017/Sanitation', {
     useNewUrlParser: true, 
     useUnifiedTopology: true
