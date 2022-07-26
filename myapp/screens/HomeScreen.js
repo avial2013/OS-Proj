@@ -51,6 +51,7 @@ export default function HomeScreen({ navigation }) {
         onSelect={() => {
           navigation.navigate("RestaurantDetails", {
             restaurantTitle: item.name,
+            restaurantIndex: item.index,
           });
         }}
       />
@@ -75,7 +76,7 @@ export default function HomeScreen({ navigation }) {
           style={styles.userInput}
           placeholder="Search Restaurant"
           keyboardType="default"
-          placeholderTextColor={"bisque"}
+          placeholderTextColor={"gray"}
           onChangeText={(text) => {
             searchInput = text;
             filteredRestaurant();

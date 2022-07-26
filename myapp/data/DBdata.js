@@ -1,5 +1,5 @@
 export const getRestaurants = async () => {
-let RESTAURANT =[]
+let RESTAURANT = []
   const response = await
   fetch("http://localhost:3000/restaurantModel", {
     method: "GET", // Request Type
@@ -54,4 +54,16 @@ export const getQuestions =async () => {
     }
     return QUESTIONS
 };
+
+export const deleteRestaurant = async (id) => {
+    const response = await
+    fetch("http://localhost:3000/restaurantModel/delete/" + id, {
+      method: "DELETE", // Request Type
+    })
+    .catch((error) => {
+      //Error
+      alert(JSON.stringify(error));
+      console.error(error);
+    })
+  };
 

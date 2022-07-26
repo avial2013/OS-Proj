@@ -1,12 +1,14 @@
-import React,{useContext} from "react";
+import React,{useContext, useEffect, useState} from "react";
 
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import { Context } from "../App";
 import styles from "../assets/Style";
+import { deleteRestaurant } from "../data/DBdata";
 
 export default function RestaurantDetails({ route, navigation }) {
   
-  const {restArray,setRestArray} = useContext(Context)
+  const {restArray,setRestArray,deleteRest} = useContext(Context);
+  const id = route.params.restaurantIndex;
 
   const currentRestaurant = restArray.find(
     (item) => item.name == route.params.restaurantTitle
@@ -65,13 +67,13 @@ export default function RestaurantDetails({ route, navigation }) {
           </View>
 
           <View style={styles.gradeView}>
-            <Text style={[styles.productContent, { fontSize: 30 }]}>
+            <Text style={[styles.productContent, { fontSize: 25 }]}>
               CURRENT GRADE:
             </Text>
             <Text
               style={[
                 styles.productContent,
-                { textAlign: "center", fontSize: 35, color: "orange" },
+                { textAlign: "center", fontSize: 20, color: "green" },
               ]}
             >
               {currentRestaurant.grade}
@@ -83,12 +85,20 @@ export default function RestaurantDetails({ route, navigation }) {
           onPress={() =>
             navigation.navigate("NewForm", {
               name: currentRestaurant.name,
-              id: currentRestaurant.id,
               contact: currentRestaurant.contact
             })
           }
         >
           <Text style={[styles.buttonText]}>CREATE NEW FORM</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.navigateButton, {marginBottom: 30, backgroundColor: 'red'}]}
+          onPress={() => {deleteRest(id);
+           deleteRestaurant(id);
+            navigation.navigate("HomeScreen")}}
+        >
+          <Text style={[styles.buttonText]}>DELETE</Text>
         </TouchableOpacity>
 
 

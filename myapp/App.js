@@ -8,6 +8,10 @@ export const Context = React.createContext();
 export default function App() {
   
   const [restArray, setRestArray] = useState([]);
+
+  const deleteRest = (id) => {
+    setRestArray(restArray.filter(rest => rest.index !== id)); 
+  }
   
   const CalcPoints = (cat, level) => {
     let sum = 0;
@@ -116,6 +120,7 @@ export default function App() {
           CheckFinalGrade,
           restArray,
           setRestArray,
+          deleteRest,
         }}
       >
         <AppNavigator />

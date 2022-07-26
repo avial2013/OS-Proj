@@ -8,13 +8,13 @@ export default StyleSheet.create({
   // *
   container: {
     flex: 1,
-    backgroundColor: "#1C2833",
+    backgroundColor: "OffWhite",
     justifyContent: "center",
     alignItems: "center",
     display: "flex",
   },
 
-  //HomeSCreen
+  //HomeScreen
   viewContainer: {
     justifyContent: "center",
     alignItems: "center",
@@ -24,8 +24,8 @@ export default StyleSheet.create({
     margin: 25,
     padding: 15,
     borderWidth: 2,
-    backgroundColor: "blue",
-    borderColor: "blue",
+    backgroundColor: "#FFA000",
+    borderColor: "#FFA000",
     borderRadius: 15,
   },
   userInput: {
@@ -37,7 +37,7 @@ export default StyleSheet.create({
     borderColor: "#6495ed",
     borderRadius: 10,
     fontSize: 20,
-    color: "#ffe4c4",
+    color: "gray",
   },
   flatList: {
     justifyContent: "center",
@@ -49,10 +49,10 @@ export default StyleSheet.create({
     width: 250,
     borderWidth: 2,
     borderRadius: 5,
-    borderColor: "crimson",
+    borderColor: "#80D8FF",
     padding: 15,
     margin: 5,
-    backgroundColor: "crimson",
+    backgroundColor: "#80D8FF",
   },
   HSText: {
     textAlign: "center",
@@ -96,7 +96,7 @@ export default StyleSheet.create({
   //Main body style
   mainBackground: {
     flex: 1,
-    backgroundColor: "#1C2833",
+    // backgroundColor: "#1C2833",
   },
 
   // container
@@ -133,12 +133,15 @@ export default StyleSheet.create({
   // main style of the text in the app
   content: {
     fontSize: 27,
-    color: "white",
+    // color: "#80D8FF",
+    // color: "#33DAFF",
     textAlign: "center",
-    textShadowColor: "black",
-    textShadowOffset: { width: 3, height: 0 },
-    textShadowRadius: 3,
-    fontFamily: font,
+    // textShadowColor: "black",
+    // textShadowOffset: { width: 2, height: 0 },
+    // textShadowRadius: 3,
+    // fontFamily: font,
+    // borderColor: "black",
+    fontWeight: 'bold',
     margin: 5,
   },
 
@@ -147,7 +150,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
     fontSize: 40,
-    fontFamily: font,
+    // fontFamily: font,
     color: "beige",
     textShadowColor: "black",
     textShadowOffset: { width: 3, height: 0 },
@@ -160,14 +163,14 @@ export default StyleSheet.create({
     alignContent: "center",
     fontSize: 40,
     color: "#fff",
-    fontFamily: font,
+    // fontFamily: font,
   },
 
   // the main style of the text in the product page
   productContent: {
-    fontSize: 23,
-    color: "cornsilk",
-    fontFamily: font,
+    fontSize: 20,
+    color: "#01579B",
+    // fontFamily: font,
   },
 
   // style of the image in product page
@@ -209,7 +212,7 @@ export default StyleSheet.create({
   AddToCartText: {
     color: "black",
     fontSize: 30,
-    fontFamily: font,
+    // fontFamily: font,
     marginLeft: 15,
     textShadowColor: "black",
     padding: 3,
@@ -244,7 +247,7 @@ export default StyleSheet.create({
 
   // the style of the input text
   textInput: {
-    fontFamily: font,
+    // fontFamily: font,
     color: "white",
     fontSize: 18,
     margin: 10,
@@ -296,7 +299,7 @@ export default StyleSheet.create({
     textShadowColor: "black",
     textShadowOffset: { width: 3, height: 0 },
     textShadowRadius: 3,
-    fontFamily: font,
+    // fontFamily: font,
     elevation: 3, // for android - to see the shadow
     textAlign: "auto",
   },
@@ -341,7 +344,7 @@ export default StyleSheet.create({
   gradeView: {
     margin: 30,
     alignItems: "center",
-    borderColor: "red",
+    borderColor: "#37474F",
     borderWidth: 4,
     borderRadius: 9,
     padding: 5,
