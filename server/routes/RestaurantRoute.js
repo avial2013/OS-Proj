@@ -1,4 +1,4 @@
-// This file will contain all the routes for students
+// This file will contain all the routes for restaurant
 
 const express = require("express");
 const { RestaurantModel } = require("../model/DBModels");
@@ -62,18 +62,6 @@ router.put("/update/:name", (req, res) => {
       }
     }
   );
-});
-
-router.delete("/delete/:id", (req, res) => {
-    RestaurantModel.findOneAndDelete({ _id: req.params.id }).exec((err, rest) => {
-    if (err) {
-      res.status(404);
-      res.send(`Failed deleting restaurant...`);
-    } else {
-      res.status(200);
-      res.send(`Restaurant was deleted successfully`);
-    }
-  });
 });
 
 // export the file

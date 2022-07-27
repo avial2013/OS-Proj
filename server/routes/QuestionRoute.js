@@ -1,4 +1,4 @@
-// This file will contain all the routes for students
+// This file will contain all the routes for questions
 
 const express = require('express');
 const {QuestionModel} = require('../model/DBModels');
