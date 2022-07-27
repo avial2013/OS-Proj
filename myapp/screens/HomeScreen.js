@@ -16,21 +16,13 @@ import styles from "../assets/Style";
 import GridTile from "./../components/GridTile";
 
 export default function HomeScreen({ navigation }) {
-  // const [restArray, setRestArray] = useState(RESTAURANT);
   const { restArray, setRestArray } = useContext(Context);
 
   useEffect(() => {
     getRestaurants().then((restaurant) => setRestArray(restaurant));
   }, []);
 
-  // listen for isFocused, if useFocused changes
-  // call the function that you use to mount the component.
-  // // Adds refresh to the screen you navigate to and back...
-  // useEffect(() => {}, [isFocused]);
-  // const [searchInput, setSearchInput] = useState("");
-
   let searchInput = "";
-  // let [restArray, setRestArray] = useState(RESTAURANT);
 
   let filteredRestaurant = () => {
     if (searchInput === "") {

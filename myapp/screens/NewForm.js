@@ -24,21 +24,13 @@ export default function NewForm({ route, navigation }) {
   useEffect(() => {
     getQuestions().then((item) => {
       setQuestList(item);
-      // setGrade(item.grade)
-      // console.log(`g : ${g}`);
-      // console.log(gradeList);
     });
   }, []);
 
   const makeLists = () => {
     if (questList != []) {
-      // questList((item) => {
-      //   listOfText.push(item);
-      // });
-      // console.log(listOfText);
       Object.values(questList).forEach(function (prop) {
         listOfText.push(prop.questionStr);
-        // gradeList.push(prop.grade);
       });
     }
   };
@@ -66,63 +58,16 @@ export default function NewForm({ route, navigation }) {
     let sum = 0;
     if (gradeList != []) {
       sum = SumGrade(gradeList);
-      // console.log(` grades gradeList: ${gradeList}`);
-      // console.log(`sumGrade : ${SumGrade(gradeList)}`);
       setQ(sum);
       console.log(`sum: ${sum}`);
       let finalG = CheckFinalGrade(sum);
 
       setGrade(finalG);
-      // console.log(`g : ${g}`);
-      //console.log(q);
       console.log(`finalG: ${finalG}`);
       return finalG;
     }
   };
 
-  //let finalGrade = q;
-
-  // let [q1, setQ1] = useState("");
-  // let [q2, setQ2] = useState("");
-  // let [q3, setQ3] = useState("");
-  // let [q4, setQ4] = useState("");
-  // let [q5, setQ5] = useState("");
-  // let [q6, setQ6] = useState("");
-  // let [q7, setQ7] = useState("");
-  // let [q8, setQ8] = useState("");
-  // let [q9, setQ9] = useState("");
-  // let [q10, setQ10] = useState("");
-  // let [q11, setQ11] = useState("");
-  // let [q12, setQ12] = useState("");
-  // const [selectedValue1, setSelectedValue1] = useState("false");
-  // const [selectedValue2, setSelectedValue2] = useState("false");
-  // const [selectedValue3, setSelectedValue3] = useState("false");
-  // const [selectedValue4, setSelectedValue4] = useState("false");
-  // const [selectedValue5, setSelectedValue5] = useState("false");
-  // const [selectedValue6, setSelectedValue6] = useState("false");
-  // const [selectedValue7, setSelectedValue7] = useState("false");
-  // const [selectedValue8, setSelectedValue8] = useState("false");
-  // const [selectedValue9, setSelectedValue9] = useState("false");
-  // const [selectedValue10, setSelectedValue10] = useState("false");
-  // const [selectedValue11, setSelectedValue11] = useState("false");
-  // const [selectedValue12, setSelectedValue12] = useState("false");
-
-  // const renderGridItem = ({ item }) => {
-  //   return (
-  //     <View style={[styles.inputView]}>
-  //         <Text style={[styles.textInput]}>{item.questionStr}</Text>
-  //         <TextInput
-  //           onChangeText={(text) => setQuestion(text)}
-  //           style={[
-  //             styles.input,
-  //           ]}
-  //           maxLength={5}
-  //           placeholder="Enter..."
-  //           placeholderTextColor="grey"
-  //         />
-  //       </View>
-  //   );
-  // };
 
   return (
     <View style={styles.mainBackground}>
@@ -151,7 +96,6 @@ export default function NewForm({ route, navigation }) {
               setQ1(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -193,7 +137,6 @@ export default function NewForm({ route, navigation }) {
               setQ3(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -214,7 +157,6 @@ export default function NewForm({ route, navigation }) {
               setQ4(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -235,7 +177,6 @@ export default function NewForm({ route, navigation }) {
               setQ5(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -256,7 +197,6 @@ export default function NewForm({ route, navigation }) {
               setQ6(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -277,7 +217,6 @@ export default function NewForm({ route, navigation }) {
               setQ7(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -298,7 +237,6 @@ export default function NewForm({ route, navigation }) {
               setQ8(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -319,7 +257,6 @@ export default function NewForm({ route, navigation }) {
               setQ9(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -340,7 +277,6 @@ export default function NewForm({ route, navigation }) {
               setQ10(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -361,7 +297,6 @@ export default function NewForm({ route, navigation }) {
               setQ11(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -382,7 +317,6 @@ export default function NewForm({ route, navigation }) {
               setQ12(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -403,7 +337,6 @@ export default function NewForm({ route, navigation }) {
               setQ13(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -424,7 +357,6 @@ export default function NewForm({ route, navigation }) {
               setQ14(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
@@ -445,19 +377,12 @@ export default function NewForm({ route, navigation }) {
               setQ15(text),
               console.log(`Prev: ${gradeList}`),
             ]}
-            // onEndEditing={test}
             style={[styles.input]}
             maxLength={1}
             keyboardType="numeric"
             placeholder="Enter level number (between 1 to 5)..."
             placeholderTextColor="grey"
           />
-          {/* <FlatList
-        keyExtractor={(item) => item.questionNum}
-        data={questList}
-        renderItem={renderGridItem}
-        numColumns={1}
-      /> */}
           <Text style={[styles.content, q == -1 ? { display: "none" } : ""]}>
             Final Grade: {g}
           </Text>
@@ -468,10 +393,7 @@ export default function NewForm({ route, navigation }) {
               () => {
                 let gradeToUpdate = grades();
                 putRestaurantsGrade(gradeToUpdate, currentRestName);
-                // }else console.log("BAD")
-                // navigation.navigate("HomeScreen");
               }
-              //
             }
           >
             <Text style={styles.buttonText}>submit</Text>

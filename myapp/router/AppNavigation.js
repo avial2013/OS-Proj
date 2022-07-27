@@ -30,7 +30,7 @@ export default function AppNavigator() {
           name="RestaurantDetails"
           component={RestaurantDetails}
           options={({ route, navigation }) => ({
-            title: route.params.restaurantTitle, // the amount of products will be displayed on thw top of the screen
+            title: route.params.restaurantTitle,
             headerRight: () => (
               <Icon
                 onPress={() => navigation.navigate("HomeScreen", { HomeScreen })}

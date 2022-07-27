@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import AppNavigator from "./router/AppNavigation";
 import AppLoading from "expo-app-loading";
-import { useFonts, Neucha_400Regular } from "@expo-google-fonts/neucha";
 
 export const Context = React.createContext();
 
 export default function App() {
   
   const [restArray, setRestArray] = useState([]);
-
-  const deleteRest = (id) => {
-    setRestArray(restArray.filter(rest => rest.index !== id)); 
-  }
   
   const CalcPoints = (cat, level) => {
     let sum = 0;
@@ -74,16 +69,6 @@ export default function App() {
     return sum;
   };
 
-  // const SumGrade = (q) => {
-  //   let points = 0;
-  //   for(let i = 0; i < q.length; i++){
-  //       if(q[i].IsTrue){
-  //           points += CalcPoints(q[i].Category, q[i].Level);
-  //       }
-  //   }
-  //   return points;
-  // }
-
   const SumGrade = (arr) => {
     let points = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -102,16 +87,6 @@ export default function App() {
     return "D";
   };
 
-  // load the fonts
-  let [fontsLoaded, err] = useFonts({
-    Neucha_400Regular,
-    "Neucha-Regular": require("./assets/fonts/Neucha/Neucha-Regular.ttf"),
-  });
-
-  // if the font is not loaded, then <AppLoading> will be displayed
-  if (!fontsLoaded) return <AppLoading />;
-  // when the font is loaded, the app will be display
-  else
     return (
       <Context.Provider
         value={{
@@ -120,7 +95,6 @@ export default function App() {
           CheckFinalGrade,
           restArray,
           setRestArray,
-          deleteRest,
         }}
       >
         <AppNavigator />

@@ -32,22 +32,6 @@ export default function NewRestaurant({ navigation }) {
     }
   };
 
-  // const postRest = (res, rej) => {
-  //   return new Promise((res, rej) => {
-  //     const result = postRestaurant(
-  //       name,
-  //       address,
-  //       openHours,
-  //       contactDetails,
-  //       image,
-  //       cnt
-  //     )
-  //     console.log(result);
-  //     (1 == 1  ? res("Succes") : rej("Failed"));
-  //     // (result != undefined && result != {} ? res("Succes") : rej("Failed"));
-  //   });
-  // };
-
   return (
     <View style={styles.container}>
       <Text style={[styles.content, { fontSize: 50 }]}>New Restaurant</Text>
@@ -95,19 +79,10 @@ export default function NewRestaurant({ navigation }) {
         style={styles.BtnAddImage}
         onPress={() => {
           pickImage();
-          // console.log(image);
         }}
       >
         <Text style={{ textAlign: "center" }}> Pick an image </Text>
       </TouchableOpacity>
-
-      {/* {image && (
-        <Image
-          source={{ uri: image }}
-          style={{ width: 200, height: 200 }}
-        />
-      
-      )} */}
 
       <TouchableOpacity
         onPress={() => {
@@ -119,13 +94,11 @@ export default function NewRestaurant({ navigation }) {
 
           postRestaurant(name, address, openHours, contactDetails, image)
             .then((item) => {
-              // setRestArray([...restArray, item]); // OR
               let temp = restArray;
               temp.push(item);
               temp.map((item, index) => {
                 item.id = index++;
               });
-              // console.log(temp)
               setRestArray(temp);
             })
             .then(() => {
@@ -135,14 +108,6 @@ export default function NewRestaurant({ navigation }) {
             .catch((error) => {
               console.log(error);
             });
-
-          // postRest().then(()=> console.log("YAYYY"))
-          // if (response != undefined) {
-          // setRestArray([...restArray, response]);
-          // console.log(
-          // `Your Restaurant was added successfully!{"\n"}Please return to Home Screen`
-          // );
-          // }
         }}
       >
         <Text style={styles.Btn}>Submit</Text>

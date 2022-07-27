@@ -14,18 +14,6 @@ export default function RestaurantDetails({ route, navigation }) {
     (item) => item.name == route.params.restaurantTitle
   );
 
-  // How to render each
-  // const renderGridItem = ({ item }) => {
-  //   return (
-  //     <CategoryGridTile
-  //       navigateToCategoryScreen={() => {
-  //         navigation.navigate("HomeScreen", {
-  //         });
-  //       }}
-  //     />
-  //   );
-  // };
-
   return (
     <View style={styles.mainBackground}>
       <ScrollView>
@@ -33,46 +21,46 @@ export default function RestaurantDetails({ route, navigation }) {
 
           <View style={[{ alignItems: "center" }]}>
             <Image
-              style={[styles.productImage]}
+              style={[styles.restImage]}
               source={{ uri: currentRestaurant.img }}
               resizeMode="cover"
             />
           </View>
 
           <View style={{ margin: 30, alignItems: "center" }}>
-            <Text style={[styles.productContent, { fontSize: 30 }]}>
+            <Text style={[styles.restContent, { fontSize: 30 }]}>
               Address:
             </Text>
-            <Text style={[styles.productContent, { textAlign: "center" }]}>
+            <Text style={[styles.restContent, { textAlign: "center" }]}>
               {currentRestaurant.address}
             </Text>
           </View>
 
           <View style={{ margin: 30, alignItems: "center" }}>
-            <Text style={[styles.productContent, { fontSize: 30 }]}>
+            <Text style={[styles.restContent, { fontSize: 30 }]}>
               Opening Hours:
             </Text>
-            <Text style={[styles.productContent, { textAlign: "center" }]}>
+            <Text style={[styles.restContent, { textAlign: "center" }]}>
               {currentRestaurant.openingHours}
             </Text>
           </View>
 
           <View style={{ margin: 30, alignItems: "center" }}>
-            <Text style={[styles.productContent, { fontSize: 30 }]}>
+            <Text style={[styles.restContent, { fontSize: 30 }]}>
               Contact:
             </Text>
-            <Text style={[styles.productContent, { textAlign: "center" }]}>
+            <Text style={[styles.restContent, { textAlign: "center" }]}>
               {currentRestaurant.contact}
             </Text>
           </View>
 
           <View style={styles.gradeView}>
-            <Text style={[styles.productContent, { fontSize: 25 }]}>
+            <Text style={[styles.restContent, { fontSize: 25 }]}>
               CURRENT GRADE:
             </Text>
             <Text
               style={[
-                styles.productContent,
+                styles.restContent,
                 { textAlign: "center", fontSize: 20, color: "green" },
               ]}
             >
@@ -91,17 +79,6 @@ export default function RestaurantDetails({ route, navigation }) {
         >
           <Text style={[styles.buttonText]}>CREATE NEW FORM</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.navigateButton, {marginBottom: 30, backgroundColor: 'red'}]}
-          onPress={() => {deleteRest(id);
-           deleteRestaurant(id);
-            navigation.navigate("HomeScreen")}}
-        >
-          <Text style={[styles.buttonText]}>DELETE</Text>
-        </TouchableOpacity>
-
-
       </ScrollView>
     </View>
   );
